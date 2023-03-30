@@ -25,7 +25,8 @@ void input() {
 	for (int i = 0; i < n; i++)
 	{
 		cout << "<" << (i + 1) << ">";
-	}	cin >> arr[i];
+		cin >> arr[i];
+	}	
 }	
 void swap(int x, int y)
 {
@@ -53,7 +54,7 @@ void q_short(int low, int high)
 		while ((arr[i] <= pivot) && (i <= high))
 		{
 			i++;
-			comp_count++;
+			cmp_count++;
 		}
 		cmp_count++;
 
@@ -95,4 +96,12 @@ void display() {
 	cout << "Number of data movements: " << mov_count << endl;
 }
 
+int main()
+{
+	input();
+	q_short(0, n - 1);
+	display();
+	system("pause");
 
+	return 0;
+}
