@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-using namespace
 
 int arr[20];
 int cmp_count = 0;
@@ -14,7 +13,7 @@ void input() {
 		cin >> n;
 
 		if (n <= 20)
-			break
+			break;
 		else
 			cout << "\nMaksimum panjang array adalah 20" << endl;
 
@@ -47,6 +46,17 @@ void q_short(int low, int high)
 
 	i = low + 1;
 	j = high;
+
+	while (i <= j)
+	{
+		while ((arr[i] <= pivot) && (i <= high))
+		{
+			i++;
+			comp_count++;
+		}
+		cmp_count++;
+	}	
+
 }
 
 
